@@ -12,7 +12,8 @@
           type="email"
           v-model="form.email"
           required
-          placeholder="Enter email" />
+          placeholder="Enter email" 
+          />
       </b-form-group>
 
       <b-form-group id="exampleInputGroup2" label="Your Name:" label-for="exampleInput2">
@@ -21,17 +22,23 @@
           type="text"
           v-model="form.name"
           required
-          placeholder="Enter name" />
+          placeholder="Enter name"
+        />
       </b-form-group>
-
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+      <b-button class="button" type="submit" variant="primary">Submit</b-button>
+      <b-button class="button" type="reset" variant="danger">Reset</b-button>
     </b-form>
   </div>
 </template>
 
-<style scoped>
+<style>
 
+.button {
+  float: right;
+  margin-left: 5px;
+}
+
+  
 .login-form {
   width: 500px;
   display: inline-block;
@@ -43,27 +50,23 @@
     data() {
       return {
         form: {
-          email: '',
-          name: '',
+          email: 'email@example.com',
+          name: 'guest',
         },
         show: true
       }
     },
     methods: {
       onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
+        this.$router.push('/items')
+        // evt.preventDefault()
+        // alert(JSON.stringify(this.form))
       },
       onReset(evt) {
         evt.preventDefault()
         /* Reset our form values */
         this.form.email = ''
         this.form.name = ''
-        /* Trick to reset/clear native browser form validation state */
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
       }
     }
   }
