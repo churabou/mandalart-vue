@@ -8,15 +8,39 @@
       <input class="chart-item-title" type="text" v-model="itemTitle">
       <textarea class="chart-item-textarea"> </textarea>
     </div>
+    <p>{{  }}</p>
+    <edit-item v-if="showEditView"/>
+<p>
+  <button @click="increment">+</button>
+  <button @click="decrement">-</button>
+</p>
   </div>
 </template>
 
 <script>
+// import Vuex from 'vuex'
+// const store = new Vuex.Store({
+//   state: {
+//     count: 0
+//   },
+//   mutations: {
+//   	increment: state => state.count++,
+//     decrement: state => state.count--
+//   }
+// });
+
+import EditItem from './edit-item';
+
+
 export default {
   name: 'ChartSection',
+  components: {
+    EditItem,
+  },
   data() {
     return {
       itemTitle: "",
+      showEditView: false,
     }
   },
   created() {
@@ -28,6 +52,16 @@ export default {
   beforeDestroy() {
     const json = JSON.stringify(this.items);
     localStorage.setItem('chart-item', json);
+  },
+  methods: {
+  increment () {
+    this.showEditView = true;
+    // store.commit('increment')
+  },
+  decrement () {
+    this.showEditView = false;
+    // store.commit('decrement')
+  }
   },
 }
 </script>
