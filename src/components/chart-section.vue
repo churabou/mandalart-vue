@@ -1,33 +1,19 @@
 <template>
-  <div class="wrapper">
-    <div class="item-container" v-for="item in items">
-      <input class="chart-item-title" type="text" v-model="item.title">
-      <textarea class="chart-item-textarea" v-model="item.body"> </textarea>
+  <div class="chart-secion">
+    <div class="wrapper">
+     <div class="item-container" v-for="item in items">
+        <input class="chart-item-title" type="text" v-model="item.title">
+        <p class="chart-item-textarea">{{item.body}}</p>
+      </div>
     </div>
-    <div class="item-container">
-      <input class="chart-item-title" type="text" v-model="itemTitle">
-      <textarea class="chart-item-textarea"> </textarea>
-    </div>
-    <p>{{  }}</p>
     <edit-item v-if="showEditView"/>
-<p>
-  <button @click="increment">+</button>
-  <button @click="decrement">-</button>
-</p>
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
   </div>
 </template>
 
 <script>
-// import Vuex from 'vuex'
-// const store = new Vuex.Store({
-//   state: {
-//     count: 0
-//   },
-//   mutations: {
-//   	increment: state => state.count++,
-//     decrement: state => state.count--
-//   }
-// });
+
 
 import EditItem from './edit-item';
 
@@ -40,7 +26,7 @@ export default {
   data() {
     return {
       itemTitle: "",
-      showEditView: false,
+      showEditView: true,
     }
   },
   created() {
@@ -68,6 +54,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.chart-section {
+  position: relative; 
+}
 
 .wrapper {
   width: 900px;

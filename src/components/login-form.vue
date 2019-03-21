@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div　class="login-form">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group
         id="exampleInputGroup1"
@@ -7,7 +7,7 @@
         label-for="exampleInput1"
         description="We'll never share your email with anyone else."
       >
-        <b-form-input
+      <b-form-input
           id="exampleInput1"
           type="email"
           v-model="form.email"
@@ -30,6 +30,14 @@
   </div>
 </template>
 
+<style scoped>
+
+.login-form {
+  width: 500px;
+  display: inline-block;
+}
+
+</style>
 <script>
   export default {
     data() {

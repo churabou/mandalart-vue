@@ -1,7 +1,7 @@
 <template>
   <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#/">MandalaChart</b-navbar-brand>
+    <b-navbar-brand href="#/login">MandalaChart</b-navbar-brand>
     <b-navbar-toggle target="nav_collapse"/>
     <b-collapse is-nav id="nav_collapse">
       <!-- Right aligned nav items -->
