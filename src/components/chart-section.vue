@@ -57,6 +57,7 @@ export default {
 
 .chart-section {
   position: relative; 
+  display: inline-block;
 }
 
 .wrapper {

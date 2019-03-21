@@ -7,17 +7,17 @@
 <style scoped>
 
 textarea {
-  margin-right: 5px; 
-  margin-left: 5px; 
-  /* width: 100%; */
+  width: 100%;
 }
 
 .edit-item-container {
-  /* position: absolute;
-  right: 0; */
+  float: right;
+  display: block;
   height: 500px;
   width: 300px;
+  padding: 10px;
   background-color: orange;
   display: inline-block;
+  text-align: center;
 }
 </style>
