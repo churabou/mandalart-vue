@@ -1,29 +1,19 @@
-import Vue from 'vue'
-import App from './App.vue'
-import BootstrapVue from 'bootstrap-vue'
-import VueRouter from 'vue-router'
-import Vuex from 'vuex'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Vue from 'vue';
+import App from './App.vue';
+
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+import store from './store/index'; // index省略できそう
+import router from './route.js';
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
-Vue.use(VueRouter)
-Vue.use(Vuex)
 
-import Login from './Login.vue'
-import ChartSection from './components/chart-section';
-
-const routes = [
-  { path: '/login', component: Login },
-  { path: '/items', component: ChartSection }
-]
-
-const router = new VueRouter({
-  routes // `routes: routes` の短縮表記
-})
 
 new Vue({
+  store,
   router,
   render: h => h(App),
 }).$mount('#app')
