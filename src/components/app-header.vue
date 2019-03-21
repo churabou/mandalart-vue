@@ -1,7 +1,7 @@
 <template>
   <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">MandalaChart</b-navbar-brand>
+    <b-navbar-brand href="#/">MandalaChart</b-navbar-brand>
     <b-navbar-toggle target="nav_collapse"/>
     <b-collapse is-nav id="nav_collapse">
       <!-- Right aligned nav items -->
@@ -16,7 +16,7 @@
           <!-- Using button-content slot -->
           <template slot="button-content"><em>User</em></template>
           <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Signout</b-dropdown-item>
+          <b-dropdown-item href="#/login">Logout</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>

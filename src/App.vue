@@ -2,24 +2,24 @@
   <div>
     <app-header></app-header>
     <p>
-      <router-link to="/foo">About</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/login">Login</router-link>
     </p>
     
+    <router-view></router-view>
     <chart-section/>
-    <login-form/>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/app-header';
 import ChartSection from './components/chart-section';
-import LoginForm from './components/login-form';
+
 
 const data = {
   components: {
     AppHeader,
     ChartSection,
-    LoginForm
   },
 }
 
