@@ -9,13 +9,15 @@ import Login from './pages/Login.vue';
 import ChartSection from './components/chart-section';
 import Qiita from './pages/Qiita.vue';
 import MyApp from './pages/MyApp.vue';
+import Items from './pages/Items.vue';
 
 const routes = [
   { path: '/login', component: Login },
-  { path: '/items', component: ChartSection },
+  // { path: '/items', component: ChartSection },
   { path: '/sample', component: VuexSample },
   { path: '/qiita', component: Qiita },
   { path: '/myapp', component: MyApp },
+  { path: '/items', component: Items },
 ];
 
 export default new VueRouter({
