@@ -11,7 +11,6 @@ import router from './route.js';
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
-
 new Vue({
   store,
   router,
