@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="position: relative;">
-      <b-button @click="handleOk" variant="primary" v-b-modal.modalPrevent class="button">新規作成</b-button>
+      <b-button @click="" variant="primary" v-b-modal.modalPrevent class="button">新規作成</b-button>
       <!-- Modal Component -->
       <b-modal 
         id="modalPrevent" 
@@ -36,8 +36,9 @@ export default {
   },
   methods: {
     handleOk() {
-      console.log(0);
-    }
+      // api new MandalaChar
+      this.$router.push('/edit');
+    },
   },
   created() {
     this.items = items;

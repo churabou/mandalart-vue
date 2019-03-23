@@ -6,27 +6,16 @@
         <p class="chart-item-textarea">{{item.body}}</p>
       </div>
     </div>
-    <edit-item v-if="showEditView"/>
-    <button @click="increment">+</button>
-    <button @click="decrement">-</button>
   </div>
 </template>
 
 <script>
 
-
-import EditItem from './edit-item';
-
-
 export default {
   name: 'ChartSection',
-  components: {
-    EditItem,
-  },
   data() {
     return {
       itemTitle: "",
-      showEditView: true,
     }
   },
   created() {
@@ -38,16 +27,6 @@ export default {
   beforeDestroy() {
     const json = JSON.stringify(this.items);
     localStorage.setItem('chart-item', json);
-  },
-  methods: {
-  increment () {
-    this.showEditView = true;
-    // store.commit('increment')
-  },
-  decrement () {
-    this.showEditView = false;
-    // store.commit('decrement')
-  }
   },
 }
 </script>
